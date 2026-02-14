@@ -6,7 +6,6 @@ build-backend = "setuptools.build_meta"
 packages = [
   "chronokit",
   "chronokit.tests",
-  "chronokit.tests.test_package",
 ]
 include-package-data = true
 package-dir = {"" = "src"}
