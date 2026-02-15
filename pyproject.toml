@@ -61,4 +61,4 @@ Documentation = "https://github.com/adalfarus/chronix/wiki"
 #addopts = "your pytest options"
 
 [project.scripts]
-chrono = "chronix._cli:_cli"
+chronix = "chronix._cli:_cli"
