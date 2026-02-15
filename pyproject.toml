@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 packages = [
-  "chronokit",
-  "chronokit.tests",
+  "chronix",
+  "chronix.tests",
 ]
 include-package-data = true
 package-dir = {"" = "src"}
@@ -13,7 +13,7 @@ package-dir = {"" = "src"}
 [tool.ruff]
 line-length = 88  # For PEP8 compliance
 exclude = [
-    "src/chronokit/tests/*",
+    "src/chronix/tests/*",
     "scripts/*",
 ]
 
@@ -21,12 +21,12 @@ exclude = [
 select = ["E", "F"]
 ignore = ["E501", "F401", "F403"]  # E501 Line length checks for now; F401 & F403 because they are used for type checking
 exclude = [
-    "src/chronokit/tests/*",
+    "src/chronix/tests/*",
     "scripts/*",
 ]
 
 [project]
-name = "chronokit"
+name = "chronix"
 version = "2.0.0.3"
 dependencies = ["typing_extensions"]
 requires-python = ">= 3.10"
@@ -50,10 +50,10 @@ classifiers = [
 dev = ["pytest", "coverage", "pre-commit", "ruff", "pdoc>=14.0"]
 
 [project.urls]
-Home = "https://pypi.org/project/chronokit/"
-Repository = "https://github.com/adalfarus/chronokit"
-Documentation = "https://github.com/adalfarus/chronokit/wiki"
-"Issue tracker" = "https://github.com/adalfarus/chronokit/issues"
+Home = "https://pypi.org/project/chronix/"
+Repository = "https://github.com/adalfarus/chronix"
+Documentation = "https://github.com/adalfarus/chronix/wiki"
+"Issue tracker" = "https://github.com/adalfarus/chronix/issues"
 
 #[tool.pytest.ini_options]
 ## This is equivalent to setup_requires and tests_require
@@ -61,4 +61,4 @@ Documentation = "https://github.com/adalfarus/chronokit/wiki"
 #addopts = "your pytest options"
 
 [project.scripts]
-chrono = "chronokit._cli:_cli"
+chrono = "chronix._cli:_cli"
