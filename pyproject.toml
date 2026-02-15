@@ -47,6 +47,7 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
+cli = ["aplustools>=2.0.0.0"]
 dev = ["pytest", "coverage", "pre-commit", "ruff", "pdoc>=14.0"]
 
 [project.urls]

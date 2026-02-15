@@ -1,12 +1,12 @@
 [![Active Development](https://img.shields.io/badge/Maintenance%20Level-Actively%20Developed-brightgreen.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
-[![CI Test Status](https://github.com/Adalfarus/chronokit/actions/workflows/test-package.yml/badge.svg)](https://github.com/Adalfarus/chronokit/actions)
-[![License: LGPL-2.1](https://img.shields.io/github/license/Adalfarus/chronokit)](https://github.com/Adalfarus/chronokit/blob/main/LICENSE)
-[![PyPI Downloads](https://static.pepy.tech/badge/chronokit)](https://pepy.tech/projects/chronokit)
-![coverage](https://raw.githubusercontent.com/Adalfarus/chronokit/refs/heads/main/coverage-badge.svg)
+[![CI Test Status](https://github.com/Adalfarus/chronix/actions/workflows/test-package.yml/badge.svg)](https://github.com/Adalfarus/chronix/actions)
+[![License: LGPL-2.1](https://img.shields.io/github/license/Adalfarus/chronix)](https://github.com/Adalfarus/chronix/blob/main/LICENSE)
+[![PyPI Downloads](https://static.pepy.tech/badge/chronix)](https://pepy.tech/projects/chronix)
+![coverage](https://raw.githubusercontent.com/Adalfarus/chronix/refs/heads/main/coverage-badge.svg)
 
-# chronokit
+# chronix
 
-chronokit is a small timer utility that has all the helpful features you could ever want.
+chronix is a small timer utility that has all the helpful features you could ever want.
 
 ## Compatibility
 🟩 (Works perfectly); 🟨 (Untested); 🟧 (Some Issues); 🟥 (Unusable)
@@ -27,29 +27,29 @@ chronokit is a small timer utility that has all the helpful features you could e
 
 ## Installation
 
-You can install chronokit via pip:
+You can install chronix via pip:
 
 ```sh
-pip install chronokit --pre --upgrade
+pip install chronix --pre --upgrade
 ```
 
 Or clone the repository and install manually:
 
 ```sh
-git clone https://github.com/Adalfarus/chronokit.git
-cd chronokit
+git clone https://github.com/Adalfarus/chronix.git
+cd chronix
 python -m pip install .
 ```
 
-If you have problems with the package please use `py -m pip install chronokit --pre --upgrade --user`
+If you have problems with the package please use `py -m pip install chronix[cli,dev] --pre --upgrade --user`
 
 ## 📦 Usage
 
-Here are a few quick examples of how to use `chronokit`.
+Here are a few quick examples of how to use `chronix`.
 
 ---
 
-## ⏱ Basic Timing (`aplustools.package.chronokit`)
+## ⏱ Basic Timing (`chronix`)
 
 Measure elapsed time with nanosecond resolution.
 
@@ -58,7 +58,7 @@ Measure elapsed time with nanosecond resolution.
 ### ⏲ Use `BasicTimer` for simple measurements
 
 ```python
-from aplustools.package.chronokit import BasicTimer
+from chronix import BasicTimer
 import time
 
 timer = BasicTimer(auto_start=True)
@@ -74,7 +74,7 @@ print(timer.get_readable()) # Human-readable
 ### 📏 Create precise deltas
 
 ```python
-from aplustools.package.chronokit import PreciseTimeDelta
+from chronix import PreciseTimeDelta
 
 delta = PreciseTimeDelta(seconds=1.5, microseconds=250)
 print(str(delta))           # 0:00:01.500250
@@ -92,7 +92,7 @@ Advanced control for performance tracking, interval measurements, and benchmarki
 ### 🧪 Measure CPU-only time (ignores sleep)
 
 ```python
-from aplustools.package.chronokit import CPUFTimer
+from chronix import CPUFTimer
 
 with CPUFTimer():
     sum(i * i for i in range(100_000))
@@ -105,7 +105,7 @@ with CPUFTimer():
 ### 🔄 Manual start/stop and waiting
 
 ```python
-from aplustools.package.chronokit import FlexTimer
+from chronix import FlexTimer
 
 t = FlexTimer(start_now=False)
 t.start(start_at=1.2)
@@ -175,14 +175,14 @@ def gen_inputs():
     for i in range(1000, 50000, 1000):
         yield ((i,), {})
 
-from aplustools.package.chronokit import FlexTimer
+from chronix import FlexTimer
 print(FlexTimer.complexity(fn, gen_inputs()))  # e.g., "O(N)"
 ```
 
 ### chrono cli
 Can currently run tests with ```chrono tests run tests/ -minimal``` and show a basic help using ```chrono help```.
 
-For more detailed usage and examples, check out our [documentation](https://github.com/adalfarus/chronokit/wiki).
+For more detailed usage and examples, check out our [documentation](https://github.com/adalfarus/chronix/wiki).
 
 ## Naming convention, dependencies and library information
 [PEP 8 -- Style Guide for Python Code](https://peps.python.org/pep-0008/#naming-conventions)
@@ -191,7 +191,7 @@ For modules I use 'lowercase', classes are 'CapitalizedWords' and functions and 
 
 ## Contributing
 
-We welcome contributions! Please see our [contributing guidelines](https://github.com/adalfarus/chronokit/blob/main/CONTRIBUTING.md) for more details on how you can contribute to chronokit.
+We welcome contributions! Please see our [contributing guidelines](https://github.com/adalfarus/chronix/blob/main/CONTRIBUTING.md) for more details on how you can contribute to chronix.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -218,4 +218,4 @@ chmod +x ./aps_build_master.sh
 
 ## License
 
-chronokit is licensed under the LGPL-2.1 License - see the [LICENSE](https://github.com/adalfarus/chronokit/blob/main/LICENSE) file for details.
+chronix is licensed under the LGPL-2.1 License - see the [LICENSE](https://github.com/adalfarus/chronix/blob/main/LICENSE) file for details.
