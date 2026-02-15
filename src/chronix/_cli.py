@@ -88,26 +88,26 @@ def _cli():
         _debug("Tests completed.")
 
     builder = ArgStructBuilder()
-    builder.add_command("aps")
-    builder.add_nested_command("aps", "tests", "run")
-    builder.add_subcommand("aps", "help")
+    builder.add_command("chronix")
+    builder.add_nested_command("chronix", "tests", "run")
+    builder.add_subcommand("chronix", "help")
 
     arg_struct = builder.get_structure()
 
     argu_mint = Argumint(
         EndPoint(lambda: print("Not implemented yet, sorry.")), arg_struct=arg_struct
     )
-    argu_mint.add_endpoint("aps.tests.run", EndPoint(_run_tests))
+    argu_mint.add_endpoint("chronix.tests.run", EndPoint(_run_tests))
     argu_mint.add_endpoint(
-        "aps.help",
+        "chronix.help",
         EndPoint(
             lambda: print(
-                "aps --> tests -> run {tests} {-debug} {-minimal}\n    |\n     -> help"
+                "chronix --> tests -> run {tests} {-debug} {-minimal}\n    |\n     -> help"
             )
         ),
     )
     argu_mint.add_endpoint(
-        "aps",
+        "chronix",
         EndPoint(
             lambda: print(
                 "This command doesn't work like that, please use it like this:\n"
@@ -116,7 +116,7 @@ def _cli():
         ),
     )
 
-    sys.argv[0] = "aps"
+    sys.argv[0] = "chronix"
 
     argu_mint.parse_cli(sys, "native_light")
 
