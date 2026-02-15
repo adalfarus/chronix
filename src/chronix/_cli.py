@@ -3,7 +3,7 @@
 try:
     from .package.autocli import Argumint, ArgStructBuilder, EndPoint
 except ImportError:
-    # from package.autocli import Argumint, ArgStructBuilder, EndPoint
+    from package.autocli import Argumint, ArgStructBuilder, EndPoint
 
 import subprocess
 import inspect

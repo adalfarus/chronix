@@ -5,10 +5,10 @@ import sys
 sys.path.insert(0, os.path.abspath("../../src"))
 
 # -- Project information -----------------------------------------------------
-project = "aplustools"
+project = "chronix"
 author = "adalfarus (Cariel Becker)"
 copyright = "2025, " + author
-release = "2.0.0.0"
+release = "2.0.0.3"
 
 # -- General configuration ---------------------------------------------------
 extensions = [
