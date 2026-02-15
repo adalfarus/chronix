@@ -111,7 +111,7 @@ def _cli():
         EndPoint(
             lambda: print(
                 "This command doesn't work like that, please use it like this:\n"
-                "aps --> tests -> run {tests} {-debug} {-minimal}\n    |\n     -> help"
+                "chronix --> tests -> run {tests} {-debug} {-minimal}\n    |\n     -> help"
             )
         ),
     )
