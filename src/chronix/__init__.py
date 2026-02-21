@@ -530,7 +530,6 @@ class PreciseTimeDelta:
         )
 
         # Adjust precision dynamically based on the fractional part
-        print(fractional_seconds)
         if (
             fractional_seconds > 0
         ):  # We convert it to a decimal to avert ones like "3e-06"
