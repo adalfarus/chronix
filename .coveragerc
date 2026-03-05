@@ -1,6 +1,6 @@
 [paths]
 source =
     src/chronix
-    */chronix/src/chronix
-    */work/chronix/chronix/src/chronix
-    D:\a\chronix\chronix\src\chronix
+    */chronix-py/src/chronix
+    */work/chronix-py/chronix-py/src/chronix
+    D:\a\chronix-py\chronix-py\src\chronix
