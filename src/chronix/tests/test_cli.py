@@ -119,4 +119,5 @@ def test_cli_run_tests_and_help(cli_module, monkeypatch):
     assert recorded["mkdir"] == ["test_data", "test_data"]
     assert len(recorded["pytest"]) == 2
     assert any("Please use this command" in p for p in printed)
+    raise Exception(printed)
     assert any("Tests failed for chronix/all." in p for p in printed)
