@@ -20,7 +20,7 @@ if _ty.TYPE_CHECKING:
     import _typeshed as _tsh
 import types as _ts
 
-__version__ = "2.0.0.4"
+__version__ = "2.0.0.5"
 __deps__: list[str] = []
 
 
